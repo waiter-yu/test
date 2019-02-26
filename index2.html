@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- viewport 后面加上 minimal-ui 在safri 体现效果 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- iphone safri 全屏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- iphone safri 状态栏的背景颜色 -->
+    <meta name="apple-mobile-web-app-title" content="wx-modernton">
+    <!-- iphone safri 添加到主屏界面的显示标题 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 禁止数字识自动别为电话号码 -->
+    <meta name="renderer" content="webkit">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <!-- 是针对一些老的不识别viewport的浏览器，列如黑莓 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- 微软的老式浏览器 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- 禁止百度转码 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="browsermode" content="application">
+    <!-- UC应用模式 -->
+    <meta name="full-screen" content="yes">
+    <!-- UC强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- QQ应用模式 -->
+    <meta name="keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        html,
+body {
+  height: 100%;
+  width: 100%;
+ 
+}
+ul{
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background: url('./img/bj.png') no-repeat;
+    background-size:7.5rem 100%;
+    overflow: hidden;
+}
+.text{
+   
+    margin-top: 1.23rem;
+    margin-left: .59rem;
+    font-family: 'MicrosoftYaHei';
+    width: 4.04rem;
+    height: .35rem;
+}
+.fsz35{
+    font-size: .35rem;
+    color: #fff;
+  
+}
+.fsz62{
+    font-size: .62rem;
+    font-weight: 700;
+    color: #fff;
+}
+.title{
+    margin-left: .51rem;
+    margin-top: .31rem;
+    
+}
+.title .userimg{
+    width: 2.83rem;
+    height: 1.59rem;
+    float: left;
+   
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.slogan{
+    width: 2.57rem;
+    height: 1.44rem;
+    float: left;
+    margin-left: .1rem;
+}
+.slogan1{
+    font-size: .36rem;
+    color:#f68900;
+    font-weight: 700;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.7rem;
+    background-color: rgba(15,2,82,0.68);
+    padding-left: .4rem;
+}
+.s1{
+    font-size: .32rem;
+    color:#fff;
+    margin-top: .33rem;
+
+}
+.s2{
+    margin-top: .22rem;
+    font-size: .34rem;
+    font-weight: 700;
+    color:#F68900;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            <div class="fsz35">改变行业格局的平台模式!</div>
+        </div>
+        <div class="title clearfix">
+            <div class="userimg">
+                    <img src="./img/user.png" alt="">
+            </div>
+            <div class="slogan">
+                    <div class="slogan1">
+                        玩游戏就赚钱!
+                    </div>
+                    <div class="slogan1">
+                            玩游戏就投资!
+                        </div>
+                        <div class="slogan1">
+                                打装备就保值!
+                            </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="s1">改变收入格局的模式:</div>
+            <div class="s2">杠杆收益,一夜暴富！区块链投资，长久稳定！</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    onload = function () {
+          setHTML();
+    
+          // 为了在pc端更好的去调试
+          onresize = function () {
+            setHTML();
+          }
+      
+          function setHTML() {
+            // 基础值
+            var baseVal = 100;
+            // 设计稿的宽度
+            var pageWidth = 750;
+            // 要适配的屏幕的宽度?
+            var screenWidth = document.querySelector("html").offsetWidth;
+            // 要设置的fontsize
+            var fontsize = screenWidth * baseVal / pageWidth;
+            // 设置到html标签的中
+            document.querySelector("html").style.fontSize = fontsize + "px";
+          }
+        }
+    </script>

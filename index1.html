@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- viewport 后面加上 minimal-ui 在safri 体现效果 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- iphone safri 全屏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- iphone safri 状态栏的背景颜色 -->
+    <meta name="apple-mobile-web-app-title" content="wx-modernton">
+    <!-- iphone safri 添加到主屏界面的显示标题 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 禁止数字识自动别为电话号码 -->
+    <meta name="renderer" content="webkit">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <!-- 是针对一些老的不识别viewport的浏览器，列如黑莓 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- 微软的老式浏览器 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- 禁止百度转码 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="browsermode" content="application">
+    <!-- UC应用模式 -->
+    <meta name="full-screen" content="yes">
+    <!-- UC强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- QQ应用模式 -->
+    <meta name="keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        html,
+body {
+  height: 100%;
+  width: 100%;
+ 
+}
+ul{
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background: url('./img/bj.png') no-repeat;
+    background-size:7.5rem 100%;
+    overflow: hidden;
+}
+.text{
+    width: 3.75rem;
+    height: 1.56rem;
+    margin-top: 1.23rem;
+    margin-left: .59rem;
+    font-family: 'MicrosoftYaHei';
+}
+.fsz35{
+    font-size: .35rem;
+    color: #fff;
+}
+.fsz62{
+    font-size: .62rem;
+    font-weight: 700;
+    color: #fff;
+}
+.title{
+    margin-left: .51rem;
+    margin-top: .47rem;
+}
+.title img{
+    width: 6.52rem;
+    height: 1.45rem;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            <div class="fsz35">2019游戏财富先机!</div>
+            <div class="fsz35">G-BOX区块链游戏平台</div>
+            <div class="fsz62">流量代理伙伴</div>
+        </div>
+        <div class="title">
+            <img src="./img/title.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    onload = function () {
+          setHTML();
+    
+          // 为了在pc端更好的去调试
+          onresize = function () {
+            setHTML();
+          }
+      
+          function setHTML() {
+            // 基础值
+            var baseVal = 100;
+            // 设计稿的宽度
+            var pageWidth = 750;
+            // 要适配的屏幕的宽度?
+            var screenWidth = document.querySelector("html").offsetWidth;
+            // 要设置的fontsize
+            var fontsize = screenWidth * baseVal / pageWidth;
+            // 设置到html标签的中
+            document.querySelector("html").style.fontSize = fontsize + "px";
+          }
+        }
+    </script>
